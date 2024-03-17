@@ -1,0 +1,352 @@
+/* --------  Google Font  -------- */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap");
+
+/* --------  Font Awesome  -------- */
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css");
+/* --------  Remix Icon  -------- */
+@import url("https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.1.0/remixicon.min.css");
+
+
+/* ================  Variable Start Here  ================= */
+:root {
+    /* --------  color variable -------- */
+    --main-color: #8e44ad;
+    --red: #e74c3c;
+    --orange: #f39c12;
+    --white: #fff;
+    --black: #2c3e50;
+    --light-color: #888;
+    --light-bg: #eee;
+    --border: 1px solid rgba(0,0,0,.15);
+
+    /* --------  font size variable -------- */
+    --low-font: 12px;
+    --xs-font: 13px;
+    --sm-font: 14px;
+    --md-font: 16px;
+    --lg-font: 18px;
+    --xl-font: 20px;
+    --xxl-font: 24px;
+    --3xl-font: 28px;
+    --4xl-font: 34px;
+    --5xl-font: 40px;
+
+    --border-1: 1px solid var(--border-color);
+    --border-2: 1px solid var(--link-hover-color);
+
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+    --box-shadow: 0 1px 3px 2px var(--shadow-color);
+    --primary-font: "Roboto", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+}
+*::-webkit-scrollbar{
+    height: 10px;
+    width: 16px;
+}
+*::-webkit-scrollbar-track{
+    background-color: transparent;
+}
+*::-webkit-scrollbar-thumb{
+    background-color: var(--main-color);
+}
+
+
+
+
+/* ================  Tag Style  ================= */
+body {
+    font-size: var(--sm-font);
+    color: var(--heading-color);
+    font-family: var(--primary-font);
+    user-select: none;
+    background-color: var(--light-bg);
+    color: var(--black);
+}
+section{
+    padding: 30px 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    letter-spacing: 0.25px;
+}
+a {
+    text-decoration: none;
+    display: inline-block;
+    color: var(--link-color);
+    font-size: var(--xs-font);
+}
+
+p {
+    color: var(--gray-color);
+    line-height: 22px;
+}
+ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+button {
+    padding: 11px 15px;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    font-size: var(--sm-font);
+}
+
+input,
+textarea {
+    padding: 13px 15px;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border-color);
+    font-size: var(--sm-font);
+    transition: outline 0.1s ease;
+}
+
+label {
+    cursor: pointer;
+}
+
+.flex-shrink-0 {
+    flex-shrink: 0;
+}
+input::placeholder{
+    font-weight: 400;
+    color: var(--light-color);
+}
+input:focus,
+textarea:focus {
+    outline: 3px solid var(--shadow-color);
+    transition: outline 0.1s ease;
+}
+input::placeholder,
+textarea::placeholder {
+    font-family: var(--primary-font);
+    letter-spacing: 0.2px;
+}
+select{
+    font-size: var(--sm-font);
+    font-weight: 500;
+}
+select:focus{
+    outline: 3px solid rgba(206, 202, 202, 0.377);
+    transition: .2s ease-in-out;
+}
+select option{
+    font-size: var(--sm-font);
+}
+img {
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+/* ==============  Global Class  ============== */
+.container {
+    max-width: 1150px;
+    width: 100%;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+.small-container {
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
+}
+.text-center {
+    text-align: center;
+    margin: 0 auto;
+}
+.text-left {
+    text-align: left;
+    margin-right: auto;
+}
+.text-right {
+    text-align: right;
+    margin-left: auto;
+}
+.block {
+    display: block;
+}
+
+
+/* ================  Button Class Style  ================= */
+.normal-btn,
+.delete-btn,
+.outline-btn{
+    padding: 9px 15px;
+    text-align: center;
+    border-radius: var(--radius-sm);
+    font-size: var(--xs-font);
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+.normal-btn{
+    background-color: var(--main-color);
+    color: var(--white);
+}
+.delete-btn{
+    background-color: var(--orange);
+    color: white;
+}
+.delete-btn:hover,
+.normal-btn:hover{
+    background-color: var(--black);
+}
+/* ------ other class ------ */
+.w-25{
+    width: 25%;
+}
+.w-50 {
+    width: 50%;
+}
+.w-100 {
+    width: 100%;
+}
+
+.p-5 {
+    padding: 5px;
+}
+.p-10 {
+    padding: 10px;
+}
+.p-15 {
+    padding: 15px;
+}
+
+.m-4 {
+    margin: 4px;
+}
+.m-6 {
+    margin: 6px;
+}
+.mt-5{
+    margin-top: 5px;
+}
+.my-3{
+    margin: 3px 0;
+}
+.my-5{
+    margin: 5px 0;
+}
+.fw-500 {
+    font-weight: 500;
+}
+.fw-600 {
+    font-weight: 600;
+}
+
+/* ================  Flex Class Start Here  ================= */
+.d-flex-5,
+.d-flex-10,
+.d-flex-15,
+.d-flex-20,
+.d-flex-25 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.d-flex-5 {
+    gap: 5px;
+}
+.d-flex-10 {
+    gap: 10px;
+}
+.d-flex-15 {
+    gap: 15px;
+}
+.d-flex-20 {
+    gap: 20px;
+}
+.d-flex-25 {
+    gap: 25px;
+}
+
+.flex-column-5,
+.flex-column-15,
+.flex-column-10,
+.flex-column-20,
+.flex-column-25 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.flex-column-5 {
+    gap: 5px;
+}
+.flex-column-10 {
+    gap: 10px;
+}
+.flex-column-15 {
+    gap: 15px;
+}
+.flex-column-20 {
+    gap: 20px;
+}
+.flex-column-25 {
+    gap: 25px;
+}
+
+.flex-start-15,
+.flex-start-5,
+.flex-start-10,
+.flex-start-20 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    justify-items: flex-start;
+    gap: 15px;
+}
+.flex-start-5 {
+    gap: 5px;
+}
+.flex-start-10 {
+    gap: 10px;
+}
+.flex-start-20 {
+    gap: 20px;
+}
+
+.flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.flex-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+/* ================  Grid Class Start Here  ================= */
+.col-3,
+.col-4,
+.col-5 {
+    display: grid;
+    gap: 15px;
+}
+.col-5 {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+    row-gap: 25px;
+}
+.col-4 {
+    gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
+}
+.col-3 {
+    grid-template-columns: repeat(3, 1fr);
+}

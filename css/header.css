@@ -1,0 +1,224 @@
+body{
+    margin-left: 250px;
+}
+body.active{
+    margin-left: 0;
+}
+header{
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--white);
+    z-index: 5;
+    padding: 10px 0;
+    border-bottom: var(--border);
+}
+.header-area{
+    position: relative;
+}
+/* =====  Logo  ===== */
+.logo a{
+    font-size: var(--xl-font);
+    font-weight: 600;
+}
+
+/* =====  Search Form  ===== */
+.search-form{
+    background-color: var(--light-bg);
+    width: 400px;
+    border-radius: var(--radius-md);
+    padding:2px 5px;
+}
+.search-form input{
+    background-color: transparent;
+    width: 100%;
+    font-size: var(--sm-font);
+    color: var(--black);
+}
+.search-form button{
+    background-color: transparent;
+    font-size: var(--md-font);
+    font-weight: 600;
+}
+.search-form button i{
+    color: var(--black);
+}
+.search-form button:hover i{
+    color: var(--main-color);
+}
+
+
+/*=====  buttons  =====*/
+.buttons li{
+    background-color: var(--light-bg);
+    padding:8px 10px ;
+    border-radius: var(--radius-sm);
+    transition: .2s linear;
+    cursor: pointer;
+}
+.buttons li a i{
+    font-size: var(--md-font);
+    font-weight: 600;
+}
+.buttons li:hover{
+    background-color: var(--black);
+    color: var(--light-bg);
+}
+.buttons li:hover a{
+    transition: .4s linear;
+    transform: rotate(360deg);
+}
+
+/* =====  Header Profile  ===== */
+header .profile{
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    padding: 15px;
+    background-color: var(--white);
+    border-radius: var(--radius-md);
+    transform-origin: top center;
+    transition: .2s linear;
+    transform: scale(0);
+    z-index: 2;
+}
+header .profile img{
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+}
+.profile-name span{
+    font-size: var(--xs-font);
+    color: var(--light-color);
+}
+header .profile.active{
+    transform: scale(1);
+}
+
+
+
+/*****************
+***  Side Bar  ***
+******************/
+.close-sidebar-mobile{
+    display: none;
+}
+.sidebar{
+    position: fixed;
+    top: 0;
+    left: 0px;
+    width: 250px;
+    background-color: var(--white);
+    border-right: var(--border);
+    height: 100dvh;
+    z-index: 5;
+    /* transition: .2s linear; */
+}
+.sidebar.active{
+    left: -250px;
+    /* box-shadow: 0 0 0 100vw rgba(0,0,0,.6); */
+}
+.close-sidebar{
+    border: var(--border);
+    padding: 5px 9px;
+    cursor: pointer;
+    text-align: right;
+    margin-right: 15px;
+    margin-top: 15px;
+}
+.close-sidebar:active{
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.185);
+}
+.close-sidebar:hover{
+    color: var(--light-color);
+}
+
+.sidebar-profile{
+    padding: 10px;
+}
+
+
+/* ===== sidebar nav ===== */
+.sidebar-nav-area ul li{
+    padding: 5px 0;
+    transition: .2s linear;
+    width: 100%;
+    padding: 10px 20px;
+}
+.sidebar-nav-area ul li:hover{
+    background-color: var(--light-bg);
+    border-left: 10px solid var(--orange);
+}
+.sidebar-nav-area a div{
+    transition: .1s linear;
+}
+.sidebar-nav-area ul li:hover div{
+    transform: translateX(5px);
+    transition: .1s ease-in;
+}
+.sidebar-nav-area a.flex-start-10{
+    align-items: center;
+}
+.sidebar-nav-area ul li a{
+    font-size: var(--sm-font);
+    transition: .2s linear;
+    color: var(--light-color);
+}
+.sidebar-nav-area a i{
+    color: var(--main-color);
+    font-size: var(--lg-font);
+}
+
+
+
+
+
+
+
+
+#search-btn{
+    display: none;
+}
+/* ======= Responsive ======== */
+@media screen and (max-width: 991px){
+    .close-sidebar-deks{
+        display: none;
+    }
+    .close-sidebar-mobile{
+        display: block;
+    }
+    .sidebar{
+        left: -250px;
+    }
+    body{
+        margin-left: 0;
+    }
+    .sidebar.active{
+        left: 0;
+    }
+    .sidebar.activeMobile{
+        left:-250px;
+    }
+}
+@media screen and (max-width: 769px) {
+    #search-btn{
+        display: block;
+    }
+    .search-form{
+        position: absolute;
+        top: 45px;
+        left: 0px;
+        width: 100%;
+        border: var(--border);
+        border-bottom: var(--border);
+        padding: 0 10px;
+        background-color: var(--white);
+        clip-path: polygon(0 0, 100% 0, 99% 0, 0 0);
+        transition: .2s linear;
+    }
+    .search-form.active{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+}
