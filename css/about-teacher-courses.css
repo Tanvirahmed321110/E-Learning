@@ -1,0 +1,28 @@
+
+
+/* =====  about page  ===== */
+.about-image img{
+    width: 100%;
+}
+.about-text .title{
+    font-size: var(--xxl-font);
+    text-align: center;
+}
+.box.about-item h3{
+    color: var(--main-color);
+    font-size: var(--xl-font);
+    font-weight: 500;
+}
+
+
+
+/* =====  students reviews  ===== */
+.students-reviews .review-user img{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    
+}
+.students-reviews .review-user i{
+    color: var(--orange);
+}

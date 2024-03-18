@@ -33,6 +33,49 @@ document.getElementById('mobile-close-sidebar').addEventListener('click',()=>{
 })
 
 
+// dark light mode
+const darkLightBtn = document.getElementById('dark-light-btn');
+const darkLightBtnIcon = darkLightBtn.querySelector('i')
+const darkMode = localStorage.getItem('dark-mode')
+
+const onDarkMode = ()=>{
+    body.classList.add('dark');
+    localStorage.setItem('dark-mode','on')
+}
+const offDarkMode = ()=>{
+    body.classList.remove('dark');
+    localStorage.setItem('dark-mode','off')
+    
+    const footer = document.querySelector('footer');
+    footer.style.color='white'
+    const footerA = document.querySelectorAll('.footer-area a');
+    const titleClass = document.querySelectorAll('.footer-area .title');
+    
+
+    footerA.forEach(element => {
+        element.style.color = 'white';
+    });
+    titleClass.forEach(each=>{
+        each.style.color='white'
+    })
+}
+
+if(darkMode === 'off'){
+    offDarkMode()
+}
+
+darkLightBtn.addEventListener('click',()=>{
+    let darkMode = localStorage.getItem('dark-mode');
+    darkLightBtnIcon.classList.toggle('ri-sun-line')
+    if(darkMode === 'off'){
+        onDarkMode()
+    }
+    else{
+        offDarkMode()
+    }
+})
+
+
 window.onscroll = ()=>{
     headerProfile.classList.remove('active');
     searchButton.classList.remove('active')

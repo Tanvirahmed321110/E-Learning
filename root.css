@@ -16,9 +16,16 @@
     --white: #fff;
     --black: #2c3e50;
     --light-color: #888;
+    --border-color:#888;
     --light-bg: #eee;
+    
+    --footer-bg: #263646;
+    --footer-white: #fff;
+    --footer-light: #ebeaea;
+    --footer-black:#2c3e50;
+    
     --border: 1px solid rgba(0,0,0,.15);
-    --border-light:1px solid var(--light-color);
+    --border-light:1px solid var(--border-color);
 
     /* --------  font size variable -------- */
     --low-font: 12px;
@@ -69,6 +76,19 @@ body {
     user-select: none;
     background-color: var(--light-bg);
     color: var(--black);
+}
+
+body.dark{
+    --white:#222;
+    --black:#fff;
+    --light-color:#aaa;
+    --light-bg:#333;
+    
+    --footer-bg: #263646;
+    --footer-white: #fff;
+    --footer-light: #ebeaea;
+    --footer-black:#2c3e50;
+    /* --border-color:#f2f2f2; */
 }
 section{
     padding: 30px 0;
@@ -178,6 +198,14 @@ img {
 .block {
     display: block;
 }
+.line-height{
+    line-height: 28px;
+}
+.xxl-font{
+    font-size: var(--3xl-font);
+}
+
+/* heading */
 .heading{
     text-transform: capitalize;
     font-size: var(--xl-font);
@@ -190,6 +218,11 @@ img {
     font-size: var(--lg-font);
     font-weight: 500;
     margin-bottom: 15px;
+}
+.sub-title{
+    font-size: var(--md-font);
+    font-weight: 500;
+    color: var(--black);
 }
 .gray-color{
     color: var(--light-color);
@@ -271,6 +304,9 @@ img {
 }
 .my-10{
     margin:15px 0;
+}
+.fw-400{
+    font-weight: 400;
 }
 .fw-500 {
     font-weight: 500;
@@ -384,7 +420,7 @@ img {
 }
 
 
-
+/* =====  Box Container  ===== */
 .box-container{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -396,4 +432,39 @@ img {
     background-color: var(--white);
     padding: 15px;
     border-radius: var(--radius-md);
+    border: 1px solid transparent;
+}
+
+
+.col-2{
+    margin-left: 50px;
+    grid-column: span 2;
+}
+/* =====  courses  ===== */
+.courses .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    justify-content: center;
+    gap: 15px;
+}
+.box .profile img{
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    object-fit: cover;
+    
+}
+.box .profile .name{
+    font-weight: 500;
+    padding-bottom: 2px;
+}
+.box-container .box:hover{
+    box-shadow: 0 0 3px rgb(97, 94, 94);
+}
+
+/* thum */
+.thum img{
+    width: 100%;
+    height: 100%;
+    border-radius: var(--radius-sm);
 }
