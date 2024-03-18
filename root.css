@@ -18,6 +18,7 @@
     --light-color: #888;
     --light-bg: #eee;
     --border: 1px solid rgba(0,0,0,.15);
+    --border-light:1px solid var(--light-color);
 
     /* --------  font size variable -------- */
     --low-font: 12px;
@@ -31,8 +32,6 @@
     --4xl-font: 34px;
     --5xl-font: 40px;
 
-    --border-1: 1px solid var(--border-color);
-    --border-2: 1px solid var(--link-hover-color);
 
     --radius-sm: 4px;
     --radius-md: 8px;
@@ -179,10 +178,25 @@ img {
 .block {
     display: block;
 }
-
-
+.heading{
+    text-transform: capitalize;
+    font-size: var(--xl-font);
+    margin-bottom: 25px;
+    border-bottom: var(--border);
+    padding-bottom: 10px;
+    font-weight: 500;
+}
+.title{
+    font-size: var(--lg-font);
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+.gray-color{
+    color: var(--light-color);
+}
 /* ================  Button Class Style  ================= */
 .normal-btn,
+.light-btn,
 .delete-btn,
 .outline-btn{
     padding: 9px 15px;
@@ -191,10 +205,16 @@ img {
     font-size: var(--xs-font);
     text-transform: capitalize;
     transition: .2s linear;
+    letter-spacing: .3px;
+    word-spacing: 1px;
+    border: 1px solid transparent;
 }
 .normal-btn{
     background-color: var(--main-color);
     color: var(--white);
+}
+.light-btn{
+    background-color: var(--light-bg);
 }
 .delete-btn{
     background-color: var(--orange);
@@ -204,6 +224,12 @@ img {
 .normal-btn:hover{
     background-color: var(--black);
 }
+.light-btn:hover{
+    background-color: var(--black);
+    color: var(--white);
+}
+
+
 /* ------ other class ------ */
 .w-25{
     width: 25%;
@@ -234,11 +260,17 @@ img {
 .mt-5{
     margin-top: 5px;
 }
+.mt-10{
+    margin-top: 15px;
+}
 .my-3{
     margin: 3px 0;
 }
 .my-5{
     margin: 5px 0;
+}
+.my-10{
+    margin:15px 0;
 }
 .fw-500 {
     font-weight: 500;
@@ -349,4 +381,19 @@ img {
 }
 .col-3 {
     grid-template-columns: repeat(3, 1fr);
+}
+
+
+
+.box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    /* align-items: ; */
+    justify-content: center;
+    gap: 15px;
+}
+.box-container .box{
+    background-color: var(--white);
+    padding: 15px;
+    border-radius: var(--radius-md);
 }
