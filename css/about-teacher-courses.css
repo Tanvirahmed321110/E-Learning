@@ -209,6 +209,114 @@
 
 
 
+/* =====  Teachers Pages  ===== */
+.single-teacher-data .data-item{
+    border-bottom: 2px solid var(--light-bg);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+    font-weight: 500;
+}
+.teachers.box-container{
+    grid-template-columns: repeat(auto-fit,minmax(32%,1fr));
+}
+
+
+
+/* =====  Teacher Profile  ===== */
+.teacher-profile .profile-data{
+    padding: 20px;
+    background-color: var(--white);
+    border-radius: var(--radius-sm);
+}
+.profile-data.flex-between{
+    gap: 50px;
+}
+
+
+/* skill-name */
+.skill-name{
+    max-width: 250px;
+    width: 100%;
+}
+.skill-name ul li{
+    border-bottom: var(--border);
+    padding: 8px 0;
+}
+
+.skill-name .skills .skill-item{
+    border: var(--border);
+    padding: 6px 10px;
+}
+
+.profile-data .profile-skill{
+    border-right: 3px solid var(--light-bg);
+    height: 100%;
+    width: 100%;
+}
+.total-video-likes{
+    max-width: 400px;
+    width: 100%;
+}
+.total-video-likes ul li{
+    padding: 10px;
+    background-color: var(--light-bg);
+    margin: 7px 0;
+    width: 200px;
+    text-align: center;
+    font-weight: 400;
+    color: var(--light-color);
+    border-radius: var(--radius-sm);
+    font-size: var(--md-font);
+}
+.total-video-likes ul li span{
+    font-size: var(--lg-font);
+    font-weight: 500;
+}
+
+
+/* =====  Contact Page  ===== */
+.contact.flex-between{
+    gap: 25px;
+}
+.contact-form{
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: var(--radius-sm);
+    box-shadow: 0 0 3px rgb(239, 239, 245);
+}
+.contact-form input,
+.contact-form textarea{
+    border-radius: var(--radius-sm);
+    background-color: var(--light-bg);
+    border: none;
+}
+
+
+/* contact-address-item */
+.contact-address.col-3{
+    margin-top: 25px;
+    gap: 50px;
+}
+.contact-address-item{
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: var(--radius-md);
+}
+.contact-address-item .icon {
+    font-size: var(--xl-font);
+    border: var(--border);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.contact-address-item  a{
+    font-size: var(--sm-font);
+}
+
+
+
 
 @media screen and (max-width:769px) {
     .playlist-video-data.flex-between {
@@ -221,6 +329,44 @@
     .playlist-videos.w-50,
     .playlist-data.w-50{
         width: 100%;
+    }
+    
+    /* =====  Teacher Profile Page  ===== */
+    .profile-data.flex-between {
+        gap: 20px;
+        flex-direction: column;
+        max-width: 400px;
+        width: 100%;
+        margin: 0 auto;
+    }
+    .profile-data .profile-skill{
+        border-right:none;
+        width: 100%;
+    }
+    .profile-data .skill-name{
+        max-width: unset;
+    }
+    .total-video-likes.w-50{
+        width: 100%;
+    }
+    .total-video-likes ul li{
+        width: 100%;
+        max-width: unset;
+    }
+    
+    /* =====  Contact Page  ===== */
+    .contact.flex-between{
+        flex-direction: column;
+    }
+    .contact-image{
+        width: 100%;
+    }
+    .contact-form {
+        width: 100%;
+    }
+    
+    .contact-address.col-3{
+        grid-template-columns: repeat( auto-fit,minmax(300px,1fr));
     }
 }
 
