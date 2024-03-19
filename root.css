@@ -204,7 +204,9 @@ img {
 .xxl-font{
     font-size: var(--3xl-font);
 }
-
+.radius-sm{
+    border-radius: var(--radius-sm);
+}
 /* heading */
 .heading{
     text-transform: capitalize;
@@ -461,7 +463,9 @@ img {
 .box-container .box:hover{
     box-shadow: 0 0 3px rgb(97, 94, 94);
 }
-
+.box img{
+    width: 100%;
+}
 /* thum */
 .thum img{
     width: 100%;

@@ -284,7 +284,7 @@ footer a{
         row-gap: 50px;
     }
     .col-2{
-        margin: 0;
+        margin-left: 0px;
     }
 }
 @media screen and (max-width: 769px) {
@@ -306,13 +306,13 @@ footer a{
     .search-form.active{
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     }
-}
-
-@media screen and (max-width:480px){
     footer .col-5{
         grid-template-columns: repeat(2,1fr);
         row-gap: 50px;
     }
+}
+
+@media screen and (max-width:480px){
     
     .footer-bottom-left input {
         min-width: 250px;
