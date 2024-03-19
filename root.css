@@ -229,6 +229,9 @@ img {
 .gray-color{
     color: var(--light-color);
 }
+.blue-color{
+    color:var(--main-color)
+}
 /* ================  Button Class Style  ================= */
 .normal-btn,
 .light-btn,
@@ -263,7 +266,11 @@ img {
     background-color: var(--black);
     color: var(--white);
 }
-
+.profile img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
 
 /* ------ other class ------ */
 .w-25{
@@ -306,6 +313,9 @@ img {
 }
 .my-10{
     margin:15px 0;
+}
+.mt-15{
+    margin-top: 20px;
 }
 .fw-400{
     font-weight: 400;

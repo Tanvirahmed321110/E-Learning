@@ -133,6 +133,83 @@
 
 
 
+/* =====  Single Video Page  ===== */
+.single-video{
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: var(--radius-sm);
+}
+
+.single-video .video{
+    border-radius: var(--radius-sm);
+    width: 100%;
+    height: 100%;
+}
+
+.teacher{
+    border-top: var(--border);
+    padding: 15px 0;
+    margin: 15px 0;
+}
+.profile.d-flex-10{
+    justify-content: flex-start;
+}
+.teacher .profile img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.normal-btn.give-like{
+    background-color: var(--light-bg);
+    color: var(--black);
+    font-weight: 500;
+    cursor: pointer;
+}
+.normal-btn.give-like i{
+    font-size: var(--md-font);
+}
+
+.normal-btn.give-like:hover{
+    color: var(--main-color);
+    border: var(--border);
+}
+
+/* ===== single video comment  ===== */
+.single-video-comments .comment-box {
+    padding:20px;
+    background-color:var(--white);
+    border-radius: var(--radius-sm);
+}
+.single-video-comments .comment-box textarea{
+    background-color: var(--light-bg);
+    border: none;
+    resize: none;
+}
+
+/* user comments */
+.single-video-comments .user-comments{
+    margin-top: 25px;
+}
+.single-video-comments .all-comments{
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: var(--radius-sm);
+}
+
+.single-video-comments .comment-text{
+    padding: 15px;
+    background-color: var(--light-bg);
+    border-radius: var(--radius-sm);
+}
+
+.delete.delete-btn{
+    background-color: var(--red);
+}
+
+
+
+
 @media screen and (max-width:769px) {
     .playlist-video-data.flex-between {
         flex-direction: column;
